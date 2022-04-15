@@ -7,12 +7,13 @@ import slider from './modules/slider';
 import calc from './modules/calc';
 
 window.addEventListener('DOMContentLoader', () => {
+    const modalTimerId = setTimeout(() => openModal('.modal',modalTimerId), 50000);
     
     tabs();
-    modal();
+    modal('[data-modal]', '.modal', modalTimerId);
     timer();
     menuCard();
-    forms();
+    forms(modalTimerId);
     slider();
     calc();
 
