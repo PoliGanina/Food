@@ -1,11 +1,11 @@
-function slider() {
-    const slides = document.querySelectorAll('.offer__slide'),
-          btnPrev = document.querySelector('.offer__slider-prev'),
-          btnNext = document.querySelector('.offer__slider-next'),
-          current = document.querySelector('#current'),
-          slider1 = document.querySelector('.offer__slider'),
-          slidesWrapper = document.querySelector('.offer__slider-wrapper'),
-          slidesField = document.querySelector('.offer__slider-inner'),
+function slider({container, slide, nextArrow, prevArrow, currentCounter, wrapper, field}) {
+    const slides = document.querySelectorAll(slide),
+          btnPrev = document.querySelector(prevArrow),
+          btnNext = document.querySelector(nextArrow),
+          current = document.querySelector(currentCounter),
+          slider1 = document.querySelector(container),
+          slidesWrapper = document.querySelector(wrapper),
+          slidesField = document.querySelector(field),
           width = window.getComputedStyle(slidesWrapper).width;
     
     slider1.style.overflow = 'hidden';
